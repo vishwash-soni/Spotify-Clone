@@ -1,0 +1,706 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+::selection {
+    background: transparent;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    min-width: 1100px;
+
+}
+
+.search {
+    display: flex;
+    gap: 8px;
+    margin-left: 150px;
+}
+
+.search .div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #1f1f1f;
+}
+
+.search .div img {
+    width: 28px;
+}
+
+.search .input {
+    position: relative;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px;
+    background: #1f1f1f;
+    width: 455px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.search .input input {
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.search .input input::placeholder {
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.search-logo {
+    width: 24px;
+}
+
+.browse {
+    filter: invert();
+    width: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.login {
+    /* margin-right: 30px; */
+    padding-right: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.login .first {
+    background: black;
+    color: #b3b3b3;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    width: 115px;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login .first:hover {
+    color: white;
+    font-size: 17px;
+}
+
+.login .second {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    width: 114px;
+    height: 47px;
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+}
+
+.login .second:hover {
+    background-color: #e4e4e4;
+    height: 48px;
+    transform: scale(1.03);
+
+}
+
+.searchOutput {
+    display: none;
+    /* border-radius: 15px; */
+    z-index: 1;
+    left: 23px;
+    top: 58px;
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    max-height: 230px;
+    background: #232323;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0px 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.searchOutput::-webkit-scrollbar {
+    background-color: transparent;
+    width: 15px;
+
+}
+
+.searchOutput::-webkit-scrollbar-thumb {
+    background: #6a6a6a;
+
+}
+
+.searchOutput ul li {
+    color: white;
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: #3b3b3b;
+    margin: 15px 0px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.searchOutput ul li:hover {
+    transform: scale(1.01);
+    background-color: white;
+    color: black;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.input:focus-within {
+    border-color: rgb(255, 255, 255);
+    /* Border color when input is selected */
+}
+
+
+/* ############################################ NAV BAR END ############################################# */
+
+/* ############################################ MAIN START ############################################# */
+
+.main {
+    display: flex;
+}
+
+.left {
+    margin-top: 7px;
+    margin-top: 7px;
+    background: linear-gradient(to bottom,
+            #232323 30%,
+            /* Very light white at the top */
+            #1d1d1d 50%,
+            /* Very light gray in the middle */
+            #1d1d1d 100%
+            /* Black at the bottom */
+        );
+    width: 295px;
+    margin-left: 8px;
+    border-radius: 10px;
+    padding-bottom: 35px;
+}
+
+.left img {
+    width: 26px;
+    /* background-color: rgb(8, 0, 255); */
+}
+
+.library {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 20px 20px;
+}
+
+.library-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.library-button h2 {
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    margin: 0 0 20px 6px;
+    width: 285px;
+    max-height: 150px;
+    background-color: #232323;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Default scrollbar styles */
+.cards::-webkit-scrollbar {
+    width: 0px;
+    opacity: 0%;
+    transition: opacity 0.9s ease;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background-color: #3f3e3e;
+}
+
+/* Show a wider scrollbar on hover */
+.cards:hover::-webkit-scrollbar {
+    width: 13px;
+    /* Increase scrollbar width on hover */
+    opacity: 100%;
+}
+
+.cards:hover::-webkit-scrollbar-thumb {
+    background-color: #dedede61;
+    /* Change thumb color on hover */
+}
+
+.card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    width: 285px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 14px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 12px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+    font-size: 14px;
+}
+
+.card-button:hover {
+    background-color: #e4e4e4;
+    transform: scale(1.03);
+}
+
+.foot {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.foot a {
+    color: rgb(112, 110, 110);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.language-button {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.language-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid #a9a4a4;
+    height: 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.language-button button img {
+    filter: invert();
+    margin-right: 5px;
+    width: 17px;
+}
+
+/* ########################### LEFT END ############################## */
+.right {
+    margin-right: 10px;
+    margin-top: 7px;
+    background: linear-gradient(to bottom,
+            #232323 30%,
+            /* Very light white at the top */
+            #1d1d1d 50%,
+            /* Very light gray in the middle */
+            #1d1d1d 100%
+            /* Black at the bottom */
+        );
+    width: 73vw;
+    margin-left: 8px;
+    border-radius: 10px;
+    padding-bottom: 18px;
+    max-height: 600px;
+}
+
+@media (max-width: 2000px) {
+    .right {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1700px) {
+    .right {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1600px) {
+    .right {
+        width: 78vw;
+    }
+}
+
+@media (max-width: 1300px) {
+    .right {
+        min-width: 800px;
+    }
+}
+
+/* @media (max-width: 1000px) {
+    .right {
+        width:67vw;
+    }
+  }@media (max-width: 900px) {
+    .right {
+        min-width: 800px;
+    }
+  } */
+
+.artist {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+    margin-top: 22px;
+}
+
+.artist div a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.artist div a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.play {
+    padding: 20px;
+    display: flex;
+    user-select: none;
+}
+
+.music-card {
+    align-items: center;
+    background-color: #181818;
+    /* Spotify green */
+    border-radius: 8px;
+    padding: 10px;
+    padding-bottom: 20px;
+    min-width: 400px;
+    height: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 900px) {
+    .music-card {
+        max-width: 260px;
+    }
+}
+
+
+/* Album image styling */
+.album-image {
+    width: 70px;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin: 10px 0 20px 10px;
+}
+
+/* Music and artist name styling */
+.music-info {
+    color: white;
+}
+
+.music-name {
+    margin-left: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.artist-name {
+    margin: 6px 0 0px 10px;
+    font-size: 14px;
+    color: #B3B3B3;
+}
+
+/* Hover effect */
+.music-card:hover {
+    transform: scale(1.05);
+    background-color: #282828;
+}
+
+.play-button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #1DB954;
+    /* Spotify green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    bottom: -10px;
+    right: 15px;
+    opacity: 0;
+}
+
+/* Play icon styling */
+.play-icon {
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-left: 18px solid rgb(0, 0, 0);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/* Hover effect */
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.music-playlist {
+    width: 100%;
+    max-height: 315px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.music-playlist::-webkit-scrollbar {
+    background-color: transparent;
+    width: 15px;
+}
+
+.music-playlist::-webkit-scrollbar-thumb {
+    background: #a9a4a4;
+}
+
+.music-playlist::-webkit-scrollbar-corner {
+    background: none;
+}
+
+@media (max-width: 1100px) {
+    .music-playlist {
+        overflow-x: scroll;
+    }
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.track-card {
+    display: flex;
+    min-width: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.track-card img {
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.track-info {
+    padding: 10px;
+}
+
+.track-info h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.track-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.track-card:hover {
+    background-color: #282828;
+    transform: scale(1.02);
+}
+
+/* ########################  MAIN END ############################ */
+
+
+.controller {
+    min-width: 1100px;
+    margin: 15px 8px;
+}
+
+.audio-controller {
+    padding: 20px;
+    padding-right: 40px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.song-details {
+    margin-bottom: 20px;
+}
+
+.song-title {
+    font-size: 18px;
+    margin: 0;
+    color: #1db954;
+}
+
+.time-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    width: 90%;
+    appearance: none;
+    background-color: #1db954;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+#progress-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+#start-time,
+#end-time {
+    color: white;
+    font-size: 14px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.control-btn {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    background-color: #1DB954;
+    /* Spotify green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s all ease-out;
+}

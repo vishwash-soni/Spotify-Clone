@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Em Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <img style="filter:invert(); cursor: pointer; margin-left: 20px;" src="resources/logo.svg" alt="image">
+            <div class="search">
+                <div class="div"><img style="filter: invert(); cursor: pointer;" src="resources/home.svg" alt=""></div>
+                <div class="input">
+                    <img class="search-logo" style="filter:invert(); cursor: pointer;" src="resources/search.svg"
+                        alt="seach">
+                    <input type="text" id="seachInput" placeholder="What do you want to play?">
+                    <img src="resources/line.svg" alt="line">
+                    <img class="browse" src="resources/browser.svg" alt="browse">
+                    <div class="searchOutput">
+                        <!-- <ul>
+                            <li>Eminem 1</li>
+                            <li>Eminem 2</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="login">
+                <button class="first">Sign up</button>
+                <button class="second">Log in</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="library">
+                    <div class="library-button">
+                        <img src="resources/library.svg" alt="library">
+                        <h2>Your Library</h2>
+                    </div>
+                    <div class="add">
+                        <img style="width: 16px;" src="resources/add.svg" alt="add">
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card" style="margin-bottom: 5px;">
+                        <div class="card-content">
+                            <h2 class="card-title">Create your first playlist</h2>
+                            <p class="card-description">It's easy, we'll help you</p>
+                            <a href="#" class="card-button">Create playlist</a>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-bottom: 5px;">
+                        <div class="card-content">
+                            <h2 class="card-title">Let's find some podcasts to follow</h2>
+                            <p class="card-description">We'll keep you updated on new episodes</p>
+                            <a href="#" class="card-button">Browse podcasts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="foot">
+                        <a href="">Legal</a>
+                        <a href="">Safety & Privacy Center</a>
+                    </div>
+                    <div class="foot">
+                        <a href="">Privacy Policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">About Ads</a>
+                    </div>
+                    <div class="foot">
+                        <a href="">Accessibility</a>
+                    </div>
+                    <div class="foot">
+                        <a href="" style="color: white;">Cookies</a>
+                    </div>
+                </div>
+                <div class="language-button">
+                    <button>
+                        <img src="resources/language.svg" alt="language">
+                        English
+                    </button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="artist">
+                    <div><a href="" style="font-size:24px;">Popular artists</a></div>
+                    <div><a href="" style="font-size: 14px; padding-top: 9px;">Show all</a></div>
+                </div>
+                <div class="play">
+                    <div class="music-card">
+                        <div class="play-button">
+                            <div class="play-icon"></div>
+                        </div>
+                        <div class="image">
+                            <img src="resources/Eminem.JPG.webp" alt="Album Cover" class="album-image">
+                        </div>
+
+                        <div class="music-info">
+                            <h3 class="music-name">Song Title</h3>
+                            <p class="artist-name">Artist Name</p>
+                        </div>
+                    </div>
+                    <div class="music-playlist">
+                        <div class="track-list">
+                            <div class="track-card">
+                                <img src="resources/The Eminem Show.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Cleanin out my closet</h3>
+                                    <p>Eminem</p>
+                                </div>
+                                <audio controls id="Cleanin-out-my-closet" style="display: none;">
+                                    <source src="songs/Eminem - Cleanin Out My Closet.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/The Death of Slim Shady.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Evil</h3>
+                                    <p>Eminem</p>
+                                </div>
+                                <audio controls id="Evil" style="display: none;">
+                                    <source src="songs/Eminem - Evil.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/The Death of Slim Shady.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Habits</h3>
+                                    <p>Eminem (feat. White Gold)</p>
+                                </div>
+                                <audio controls id="Habits" style="display: none;">
+                                    <source src="songs/Eminem - Habits (feat. White Gold).mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/The Eminem Show.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Hailies Song</h3>
+                                    <p>Eminem</p>
+                                </div>
+                                <audio controls id="Hailies-Song" style="display: none;">
+                                    <source src="songs/Eminem - Hailies Song.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/Kamikaze.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Lucky You</h3>
+                                    <p>Eminem (Feat. Joyner Lucas)</p>
+                                </div>
+                                <audio controls id="Lucky-You" style="display: none;">
+                                    <source src="songs/Eminem - Lucky You.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/The Eminem Show.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>My Dads Gone Crazy</h3>
+                                    <p>Eminem Hailie Jade</p>
+                                </div>
+                                <audio controls id="My-Dads-Gone-Crazy" style="display: none;">
+                                    <source src="songs/Eminem Hailie Jade - My Dads Gone Crazy.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/Kamikaze.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Not Alike</h3>
+                                    <p>Eminem (feat. Royce da 59)</p>
+                                </div>
+                                <audio controls id="Not-Alike" style="display: none;">
+                                    <source src="songs/Eminem - Not Alike (feat. Royce da 59).mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="track-card">
+                                <img src="resources/Music To Be Murdered.jpg" alt="Album Cover">
+                                <div class="track-info">
+                                    <h3>Favorite Bitch</h3>
+                                    <p>Eminem (feat. Ty Dolla)</p>
+                                </div>
+                                <audio controls id="Favorite-Bitch" style="display: none;">
+                                    <source src="songs/Eminem - Favorite Bitch (feat. Ty Dolla).mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <!-- Add more track cards as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controller">
+            <div class="audio-controller">
+                <div class="song-details">
+                    <p class="song-title" id="song-title">Track Title</p>
+                </div>
+                <div class="time-bar">
+                    <span id="start-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" max="100">
+                    <span id="end-time">3:45</span>
+                </div>
+                <div class="control-buttons">
+                    <div class="control-btn skip-button " onclick="shareIt()">
+                        <img src="resources/share.svg" alt="share" style="width: 18px; margin-top: 27px;">
+                        <p style="color: #a0a0a0;">Share</p>
+                    </div>
+                    <div class="control-btn random-button" onclick="playRandom()">
+                        <img src="resources/shuffle.svg" alt="shuffle" style="width: 18px; margin-top: 27px;">
+                        <p style="color: #a0a0a0;">Random</p>
+                    </div>
+                    <div class="control-btn skip-backward-button" id="previous">
+                        <img src="resources/left.svg" alt="backward" style="width: 18px; margin-top: 28px;">
+                        <p style="color: #a0a0a0;">Previous</p>
+                    </div>
+                    <div class="control-btn play-toggle-button" id="play" onclick="playStop()">
+                        <img id="play-pause-toggle" src="resources/play.svg" alt="play/pause"
+                            style="width: 15px; margin:30px 0px 3px 3px">
+                        <p style="color: white;">Play</p>
+                    </div>
+                    <div class="control-btn skip-forward-button" id="next">
+                        <img src="resources/right.svg" alt="forward" style="width: 18px; margin-top: 28px;">
+                        <p style="color: #a0a0a0;">Next</p>
+                    </div>
+                    <div class="control-btn repeat-button" id="loop">
+                        <img src="resources/loop.svg" alt="loop" style="width: 18px; margin-top: 28px;">
+                        <p style="color: #a0a0a0;">Loop</p>
+                    </div>
+                    <div class="control-btn download-track-button" onclick="downloadSong()">
+                        <img src="resources/download.svg" alt="download" style="width: 18px; margin-top: 28px;">
+                        <p style="color: #a0a0a0;">Download</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
