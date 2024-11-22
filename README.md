@@ -30,5 +30,5 @@ This project was inspired by my passion for both music and web development. As a
 
 ## 🔗 Live Demo
 
-[Click here to check out the live demo](https://em-spotify.netlify.app/)
+[Click here to check out the live demo](https://vishwash-spotify-clone.netlify.app/)
 
